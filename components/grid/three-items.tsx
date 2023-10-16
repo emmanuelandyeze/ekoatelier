@@ -12,11 +12,6 @@ export async function ThreeItemGrid() {
 
   const [firstProduct, secondProduct, thirdProduct] = homepageItems;
 
-  const images = [
-    'https://www.legacyatelier.com.ng/_next/image?url=%2Fbanner2.png&w=640&q=75',
-    'https://www.legacyatelier.com.ng/_next/image?url=%2Fbanner1.png&w=640&q=75'
-  ];
-
   return (
     <div>
       <div className="mx-auto mb-2 max-w-7xl px-3">
@@ -25,7 +20,7 @@ export async function ThreeItemGrid() {
             <div className="w-full md:mr-0 md:w-full">
               <div className="relative h-52 w-full overflow-hidden px-1 py-10 md:h-96">
                 <Image
-                  src={'https://www.legacyatelier.com.ng/_next/image?url=%2Fbanner1.png&w=640&q=75'}
+                  src={'https://legacyatelier.vercel.app/_next/image?url=%2Fbanner1.png&w=640&q=75'}
                   alt={`Slide`}
                   className={`absolute left-0 top-0 h-full w-full rounded-lg object-cover transition-opacity duration-500 md:object-cover`}
                   style={{
@@ -58,7 +53,7 @@ export async function ThreeItemGrid() {
                 >
                   <Image
                     className="mt-16 h-96 w-full object-contain pl-0 md:mt-10"
-                    src={'https://www.legacyatelier.com.ng/_next/image?url=%2F9.png&w=640&q=75'}
+                    src={'https://legacyatelier.vercel.app/_next/image?url=%2F9.png&w=640&q=75'}
                     alt="/"
                     width={500}
                     height={500}
@@ -82,7 +77,7 @@ export async function ThreeItemGrid() {
                 >
                   <Image
                     className="mt-16 h-96 w-full object-contain pl-0 md:mt-16"
-                    src={'https://www.legacyatelier.com.ng/_next/image?url=%2F8.png&w=640&q=75'}
+                    src={'https://legacyatelier.vercel.app/_next/image?url=%2F8.png&w=640&q=75'}
                     alt="/"
                     style={{
                       borderRadius: '18px'
@@ -110,7 +105,7 @@ export async function ThreeItemGrid() {
                 >
                   <Image
                     className="w-full object-cover"
-                    src={'https://www.legacyatelier.com.ng/_next/image?url=%2F5.jpg&w=640&q=75'}
+                    src={'https://legacyatelier.vercel.app/_next/image?url=%2F5.jpg&w=640&q=75'}
                     alt="/"
                     style={{
                       borderRadius: '18px',
