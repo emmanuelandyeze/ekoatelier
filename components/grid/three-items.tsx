@@ -1,6 +1,4 @@
 import { getCollectionProducts } from 'lib/shopify';
-import Image from 'next/image';
-import Link from 'next/link';
 
 export async function ThreeItemGrid() {
   // Collections that start with `hidden-*` are hidden from the search page.
@@ -14,7 +12,7 @@ export async function ThreeItemGrid() {
 
   return (
     <div>
-      <div className="mx-auto mb-2 max-w-7xl px-3">
+      {/* <div className="mx-auto mb-2 max-w-7xl px-3">
         <div className="px-0 pt-4 md:px-0 md:pt-2">
           <div className="flex flex-col items-start md:flex-row">
             <div className="w-full md:mr-0 md:w-full">
@@ -34,9 +32,9 @@ export async function ThreeItemGrid() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Categories */}
-      <div className="h-full pt-1 md:pt-2">
+      {/* <div className="h-full pt-1 md:pt-2">
         <div className="relative mx-auto flex max-w-6xl items-center">
           <div
             id="slider"
@@ -134,7 +132,8 @@ export async function ThreeItemGrid() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <h1>Hello world</h1>
     </div>
   );
 }

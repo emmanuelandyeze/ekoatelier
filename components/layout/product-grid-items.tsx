@@ -26,3 +26,4 @@ export default function ProductGridItems({ products }: { products: Product[] }) 
     </>
   );
 }
+ 
