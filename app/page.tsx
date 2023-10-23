@@ -1,6 +1,7 @@
 import Grid from 'components/grid';
 import Footer from 'components/layout/footer';
 import ProductGridItems from 'components/layout/product-grid-items';
+import { defaultSort } from 'lib/constants';
 import { getCollectionProducts } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,7 +17,8 @@ export const metadata = {
 };
 
 export default async function HomePage() {
-  const products = await getCollectionProducts({ collection: 'new-arrivals' });
+  const { sortKey, reverse } = defaultSort;
+  const products = await getCollectionProducts({ collection: 'new-arrivals', sortKey, reverse });
   return (
     <>
       <div>
