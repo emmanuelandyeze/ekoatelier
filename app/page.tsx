@@ -1,5 +1,7 @@
-import { Carousel } from 'components/carousel';
+import Grid from 'components/grid';
 import Footer from 'components/layout/footer';
+import ProductGridItems from 'components/layout/product-grid-items';
+import { getCollectionProducts } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
@@ -14,6 +16,7 @@ export const metadata = {
 };
 
 export default async function HomePage() {
+  const products = await getCollectionProducts({ collection: 'new-arrivals' });
   return (
     <>
       <div>
@@ -42,10 +45,10 @@ export default async function HomePage() {
         </div>
         {/* Categories */}
         <div className="h-full pt-1 md:pt-2">
-          <div className="relative mx-auto flex max-w-6xl items-center">
+          <div className="scrollbar-hide relative mx-auto flex max-w-6xl items-center">
             <div
               id="slider"
-              className="scroll scrollbar-hide my-4 h-full w-full overflow-x-scroll scroll-smooth whitespace-nowrap py-0 pl-2 md:my-0 md:py-5"
+              className="scroll no-scrollbar my-4 h-full w-full overflow-x-scroll scroll-smooth whitespace-nowrap py-0 pl-2 md:my-0 md:py-5"
             >
               <div className=" w-8/12 md:w-96">
                 <Link href={'/clothes'}>
@@ -144,7 +147,18 @@ export default async function HomePage() {
         </div>
       </div>
       <Suspense>
-        <Carousel />
+        <div className="mx-auto mb-2 max-w-6xl px-3">
+          <h1 className="mx-4 mb-4 text-3xl font-semibold">New Arrivals</h1>
+          <div className="mx-auto mb-2 max-w-7xl px-3">
+            {products.length === 0 ? (
+              <p className="py-3 text-lg">{`No products found in this collection`}</p>
+            ) : (
+              <Grid className="grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
+                <ProductGridItems products={products} />
+              </Grid>
+            )}
+          </div>
+        </div>
         <Suspense>
           <Footer />
         </Suspense>

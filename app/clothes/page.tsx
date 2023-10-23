@@ -6,7 +6,7 @@ export default function ClothesPage() {
     <div>
       <div className="mx-auto mb-2 max-w-7xl px-3">
         <div className="px-0 pt-4 md:px-0 md:pt-2">
-          <h1 className="mx-4 mb-2 text-3xl font-semibold">Clothes</h1>
+          <h1 className="mx-4 mb-2 text-3xl font-semibold">Clothing</h1>
           <div className="mx-auto grid max-w-screen-xl grid-cols-2 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <Link href={'/search/t-shirts'}>
               <div className="cursor-pointer rounded-lg bg-white text-center shadow-md duration-300 ease-in-out dark:bg-black md:hover:scale-105">
