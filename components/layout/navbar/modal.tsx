@@ -5,7 +5,7 @@ import { FaSquareXTwitter } from 'react-icons/fa6';
 import { MdCancel } from 'react-icons/md';
 import Search from './search';
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   if (!isOpen) return null;
 
   return (
