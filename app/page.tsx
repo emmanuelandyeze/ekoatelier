@@ -59,11 +59,13 @@ export default async function HomePage() {
                       borderRadius: '18px',
                       height: '28rem'
                     }}
-                    className="relative mx-2 inline-block w-full cursor-pointer bg-slate-100 shadow-md duration-300 ease-in-out dark:bg-black md:hover:scale-105"
+                    className="relative mx-2 inline-block w-full cursor-pointer bg-white shadow-md duration-300 ease-in-out dark:bg-black md:hover:scale-105"
                   >
                     <Image
                       className="mt-16 h-96 w-full object-contain pl-0 md:mt-10"
-                      src={'https://legacyatelier.vercel.app/_next/image?url=%2F9.png&w=640&q=75'}
+                      src={
+                        'https://res.cloudinary.com/dkhoomk9a/image/upload/v1698193486/Picture1__1_-removebg-preview_dxzoud.png'
+                      }
                       alt="/"
                       width={500}
                       height={500}
@@ -85,26 +87,31 @@ export default async function HomePage() {
                       borderRadius: '18px',
                       height: '28rem'
                     }}
-                    className="relative  mx-2 inline-block w-full cursor-pointer bg-slate-100 shadow-md duration-300 ease-in-out dark:bg-black md:hover:scale-105"
+                    className="relative  mx-2 inline-block w-full cursor-pointer bg-white shadow-md duration-300 ease-in-out dark:bg-black md:hover:scale-105"
                   >
                     <Image
                       className="mt-16 h-96 w-full object-contain pl-0 md:mt-16"
-                      src={'https://legacyatelier.vercel.app/_next/image?url=%2F8.png&w=640&q=75'}
+                      src={
+                        'https://res.cloudinary.com/dkhoomk9a/image/upload/v1698194128/20230927_131920-removebg-preview_rszsnk.png'
+                      }
                       alt="/"
                       style={{
                         borderRadius: '18px'
                       }}
-                      width={500}
-                      height={500}
+                      width={400}
+                      height={400}
                       unoptimized
                     />
                     <div className=" absolute left-3 top-3 md:left-5 md:top-5">
-                      <p className="text-4xl font-bold text-slate-800 dark:text-slate-50">
-                        Souvenirs
+                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
+                        Souvenirs,
                       </p>
-                      <h2 className="text-slate-800 dark:text-slate-50">
-                        Quality products for <br /> all events.
-                      </h2>
+                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
+                        Stationaries
+                      </p>
+                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
+                        & Gift Items
+                      </p>
                     </div>
                   </div>
                 </Link>
@@ -117,7 +124,9 @@ export default async function HomePage() {
                   >
                     <Image
                       className="w-full object-cover"
-                      src={'https://legacyatelier.vercel.app/_next/image?url=%2F5.jpg&w=640&q=75'}
+                      src={
+                        'https://res.cloudinary.com/dkhoomk9a/image/upload/v1698194990/20230809_225814_qcymio.jpg'
+                      }
                       alt="/"
                       style={{
                         borderRadius: '18px',
