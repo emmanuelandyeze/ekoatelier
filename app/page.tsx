@@ -19,6 +19,10 @@ export const metadata = {
 export default async function HomePage() {
   const { sortKey, reverse } = defaultSort;
   const products = await getCollectionProducts({ collection: 'new-arrivals', sortKey, reverse });
+  const images = [
+    'https://legacyatelier.vercel.app/_next/image?url=%2Fbanner1.png&w=640&q=75',
+    'https://legacyatelier.vercel.app/_next/image?url=%2Fbanner2.png&w=640&q=75',
+  ];
   return (
     <>
       <div>
@@ -26,20 +30,14 @@ export default async function HomePage() {
           <div className="px-0 pt-4 md:px-0 md:pt-2">
             <div className="flex flex-col items-start md:flex-row">
               <div className="w-full md:mr-0 md:w-full">
-                <div className="relative h-52 w-full overflow-hidden px-1 py-10 md:h-96">
-                  <Image
-                    src={
-                      'https://legacyatelier.vercel.app/_next/image?url=%2Fbanner1.png&w=640&q=75'
-                    }
-                    alt={`Slide`}
-                    className={`absolute left-0 top-0 h-full w-full rounded-lg object-cover transition-opacity duration-500 md:object-cover`}
-                    style={{
-                      borderRadius: '8px'
-                    }}
-                    width={500}
-                    height={800}
-                    unoptimized
-                  />
+                <div className="relative w-full overflow-hidden">
+                  <div className="carousel flex">
+                    {images.map((image, index) => (
+                      <div key={index} className="w-full flex-shrink-0">
+                        <img src={image} alt={`Image ${index}`} className="w-full rounded-lg" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -90,7 +88,7 @@ export default async function HomePage() {
                     className="relative  mx-2 inline-block w-full cursor-pointer bg-white shadow-md duration-300 ease-in-out dark:bg-black md:hover:scale-105"
                   >
                     <Image
-                      className="mt-16 h-96 w-full object-contain pl-0 md:mt-16"
+                      className="mt-24 h-80 w-full object-contain pl-0 md:mt-28"
                       src={
                         'https://res.cloudinary.com/dkhoomk9a/image/upload/v1698194128/20230927_131920-removebg-preview_rszsnk.png'
                       }
@@ -103,13 +101,13 @@ export default async function HomePage() {
                       unoptimized
                     />
                     <div className=" absolute left-3 top-3 md:left-5 md:top-5">
-                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
+                      <p className="text-2xl font-bold text-slate-800 dark:text-slate-50">
                         Souvenirs,
                       </p>
-                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
+                      <p className="text-2xl font-bold text-slate-800 dark:text-slate-50">
                         Stationaries
                       </p>
-                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
+                      <p className="text-2xl font-bold text-slate-800 dark:text-slate-50">
                         & Gift Items
                       </p>
                     </div>
@@ -158,7 +156,7 @@ export default async function HomePage() {
         </div>
       </div>
       <Suspense>
-        <div className="mx-auto mb-2 max-w-6xl px-3">
+        <div className="mx-auto mb-10 max-w-6xl px-3">
           <h1 className="mx-4 mb-4 text-3xl font-semibold">New Arrivals</h1>
           <div className="mx-auto mb-2 max-w-7xl px-3">
             {products.length === 0 ? (
