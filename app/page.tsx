@@ -101,13 +101,11 @@ export default async function HomePage() {
                       unoptimized
                     />
                     <div className=" absolute left-3 top-3 md:left-5 md:top-5">
-                      <p className="text-2xl font-bold text-slate-800 dark:text-slate-50">
-                        Souvenirs,
-                      </p>
-                      <p className="text-2xl font-bold text-slate-800 dark:text-slate-50">
+                      
+                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
                         Stationaries
                       </p>
-                      <p className="text-2xl font-bold text-slate-800 dark:text-slate-50">
+                      <p className="text-3xl font-bold text-slate-800 dark:text-slate-50">
                         & Gift Items
                       </p>
                     </div>

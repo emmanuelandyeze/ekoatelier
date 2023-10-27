@@ -1,6 +1,6 @@
 // components/Modal.js
 
-import { BsInstagram, BsWhatsapp } from 'react-icons/bs';
+import { BsFacebook, BsInstagram, BsWhatsapp } from 'react-icons/bs';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { MdCancel } from 'react-icons/md';
 import Search from './search';
@@ -16,9 +16,14 @@ const Modal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) =>
       <div className="relative z-50 rounded-lg bg-white p-4 shadow-lg dark:bg-black">
         <div className="flex items-center justify-between">
           <Search />
-          <MdCancel color="red" size={34} onClick={onClose} className='ml-2' />
+          <MdCancel color="red" size={34} onClick={onClose} className="ml-2" />
         </div>
         <ul className="mt-4 text-center">
+          <li className="mb-3">
+            <a href="/" className=" mb-6 text-lg hover:underline">
+              Home
+            </a>
+          </li>
           <li className="mb-3">
             <a href="/clothes" className=" mb-6 text-lg hover:underline">
               Clothing
@@ -36,11 +41,14 @@ const Modal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) =>
           </li>
         </ul>
         <div className="mt-3 flex w-full flex-row justify-center">
-          <a href="https://www.instagram.com/eko_atelier/" target="blank">
+          <a href="https://wa.link/n1ed4y" target="blank">
             <BsWhatsapp size={30} className="mr-4" />
           </a>
-          <a href="https://wa.link/7j6v4e" target="blank">
+          <a href="https://www.instagram.com/eko_atelier/" target="blank">
             <BsInstagram size={30} className="mr-4" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61551851506809" target="blank">
+            <BsFacebook size={30} className="mr-4" />
           </a>
           <a href="https://twitter.com/Eko_Atelier" target="blank">
             <FaSquareXTwitter size={30} />
